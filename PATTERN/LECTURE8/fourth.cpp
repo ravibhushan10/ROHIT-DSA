@@ -5,34 +5,36 @@
 //         A B C D
 //       A B C D E
 #include<iostream>
-using namespace std;
-
-
-
-int main()
+int main(void)
 {
     int n;
-    cout<<"enter the number:";
-    cin>>n;
-    for(int i=1;i<=n;i=i+1)
-{
-    for(int j=1;j<=n-i;j=j+1)
+    std ::cout<<"enter the number:";
+
+    while (true)
     {
-        cout<<"  ";
+    std ::cin>>n;
+    if(n<=26)
+    {
+        break;
+    }
+    else{
+        std ::cout<<"please enter the number(1 to 26)";
+    }
     }
 
-    for(char k='A';k<='A'+i-1;k=k+1)
+    for(int i=1;i<=n;i++)
     {
-        cout<<k<<" ";
-       
+        for(int j=1;j<=n-i; j++)
+        {
+            std ::cout<<"  ";
+        }
+        char let='A'+(i-1);
+        for(char name='A';name<=let;name=name+1)
+        {
+            std ::cout<<name<<" ";
+        }
+        std ::cout<<std ::endl;
     }
-    // char name='A';
-    // for(int k=1;k<=i;k=k+1)
-    // {
-    //     cout<<name<<" ";
-    //     name=name+1;
-    // }
-    cout<<endl;
-}
-return 0;
+
+   return 0;
 }

@@ -5,24 +5,36 @@
 //       a b c d e
 //       a b c d e
 #include<iostream>
-using namespace std;
-// First method
-int main()
+int main(void)
 {
     int n;
-    cout<<"enter the number:"<<endl;
-    cin>>n;
-    for(int i=1;i<=n;i=i+1)
+    std ::cout<<"enter the number:"<<std ::endl;
+    while(true)
     {
-        for(int j=1;j<=n;j=j+1)
-        {
-    char name='a'+(j-1);
-          cout<<name<<" ";
-        }
-        cout<<endl;
+    std ::cin>>n;
+       if(n>0 && n<=26)
+       {
+        break;
+       }
+       else 
+       {
+         std ::cout<<"please enter the value between (1 to 26:)"<<std ::endl;
+       }
     }
+
+    
+    for(int row=1;row<=n; row++)
+    {
+       for(int col=1;col<=5;col=col+1)
+       {
+       char name= 'a'+(col-1);
+         std ::cout<<name<<" ";
+       }
+       std ::cout<<std ::endl;
+       
+    }
+   return 0;
 }
- 
 // //  Second method
 
 

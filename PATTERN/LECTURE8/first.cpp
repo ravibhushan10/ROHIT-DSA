@@ -5,23 +5,24 @@
 //          * * * *
 //        * * * * *
 #include<iostream>
-using namespace std;
-int main()
+int main(void)
 {
-    int n;
-    cout<<"enter the number:";
-    cin>>n;
-    for(int i=1;i<=n;i=i+1)
-{
-    for(int j=1;j<=n-i;j=j+1)
+     int n;
+    std ::cout<<"enter the number:";
+    std ::cin>>n;
+    
+   for(int i=1;i<=n;i++)
+   {
+    
+    for(int j=1;j<=n-i;j++)
     {
-        cout<<"  ";
+        std ::cout<<"  ";
     }
-    for(int k=1;k<=i;k=k+1)
+    for(int k=1;k<=i;k++)
     {
-        cout<<"* ";
+        std ::cout<<"*"<<" ";
     }
-    cout<<endl;
-}
-return 0;
+    std ::cout<<std ::endl;
+   }
+   return 0;
 }

@@ -1,21 +1,24 @@
 // decimal to binary conversion 
 #include<iostream>
-using namespace std;
-int main()
+#include<climits>
+int main(void)
 {
-    int num,mul=1;
-    int rem,ans=0;
-    cout<<"enter the  decimal number :";
-    cin>>num;
-    while(num!=0)  
-    // or (num>0) 
+    int n;
+    std ::cout<<"enter the decimal number:";
+    std ::cin>>n;
+    if(n==0)
     {
-         rem= num%2;
-         num=num/2;
-         ans=rem*mul+ans;
-         mul=mul*10;
+       return 0;
     }
-    cout<<"the binary  number is:"<<ans;
-    // if ans is 22475858 due to 32 bit interger store karta ha only
-return 0;
+    int rem,ans=0,mul=1;
+    while (n>0)
+    {
+      rem= n%2;
+      n=n/2;
+      ans=rem*mul+ans; 
+      mul=mul*10;
+
+    }
+    std ::cout<<"Binary number is:"<<ans;
+   return 0;
 }

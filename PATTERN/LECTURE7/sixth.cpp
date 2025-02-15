@@ -5,19 +5,19 @@
 //       * *
 //       *
 #include<iostream>
-using namespace std;
- 
-int main()
+int main(void)
 {
-    int n;
-    cout<<"enter the number:";
-    cin>>n;
-    for(int i=n;i>=1;i=i-1)
-    {
-        for(int j=1;j<=i;j=j+1)
-        {
-            cout<<"* ";
-        }
-        cout<<endl;
-    }
+     int n;
+    std ::cout<<"enter the number:";
+    std ::cin>>n;
+   
+   for(int i=n;i>0;i--)
+   {
+     for(int j=i;j>0;j--)
+     {
+        std ::cout<<"*"<<" ";
+     }
+     std ::cout<<std ::endl;
+   }
+   return 0;
 }

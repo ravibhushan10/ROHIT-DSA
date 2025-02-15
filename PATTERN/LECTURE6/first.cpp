@@ -4,20 +4,21 @@
 //    * * * * *
 //    * * * * *
 //    * * * * *
+
 #include<iostream>
-using namespace std;
 int main()
 {
     int n;
-    cout<<"enter the number:";
-    cin>>n;
-    for(int j=1;j<=n;j=j+1)
+    std ::cout<<"enter the number:";
+    std ::cin>>n;
+
+    for(int row=1;row<=n;row=row+1)
     {
-    for(int i=1;i<=n;i=i+1)
-    {
-        cout<<"* ";
-    }
-    cout<<endl;
+        for(int col=1;col<=5;col=col+1)
+        {
+            std ::cout<<"*"<<" ";
+        }
+        std ::cout<<std ::endl;
     }
     return 0;
 }

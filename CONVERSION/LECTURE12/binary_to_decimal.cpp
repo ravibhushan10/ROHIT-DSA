@@ -1,24 +1,48 @@
 // Binary to decimal conversion
-#include<iostream>
-using namespace std;
+#include <iostream>
 
 
-int main()
+int main(void)
 {
-    int num,mul=1 ;
-    int rem,ans=0;
-    cout<<"enter the binary number:";
-    cin>>num;
-    while(num>0)  
-    // or (num>0) 
-    {
-         rem= num%10;
-         num=num/10;
-         ans=rem*mul+ans;
-         mul=mul*2;
-         
+    std :: cout << "Enter a binary number: ";
+    int n;
+
+    int temp = n, rem, ans = 0, mul = 1;
+
+    while (true) {
+        
+      std ::  cin >> n;
+        
+
+        int temp = n;
+        bool isBinary = true;
+        
+        
+        while (temp > 0) {
+            rem = temp % 10;
+            if (rem != 0 && rem != 1) {
+                isBinary = false;
+                break;
+            }
+            temp /= 10;
+        }
+        
+        if (isBinary) {
+            break; 
+        } else {
+           std :: cout << "Invalid input! Please enter a binary number (only 0s and 1s)." <<std :: endl;
+           std :: cout<<"enter the binary number:"<<std :: endl;
+        }
     }
-    cout<<"the decimal  number is:"<<ans;
-    
-return 0;
+
+    while (n > 0)
+    {
+        rem = n % 10;
+        ans = rem * mul + ans;
+        mul *= 2;
+        n /= 10;
+    }
+
+   std :: cout << "Decimal number is: " << ans;
+    return 0;
 }

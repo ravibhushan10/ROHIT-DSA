@@ -5,20 +5,19 @@
 //       4 4 4 4
 //       5 5 5 5 5
 #include<iostream>
-using namespace std;
  
 int main()
 {
     int n;
-    cout<<"enter the number:";
-    cin>>n;
+   std :: cout<<"enter the number:";
+   std :: cin>>n;
     for(int i=1;i<=n;i=i+1)
     {
         for(int j=1;j<=i;j=j+1)
         {
-            cout<<i<<" ";
+           std :: cout<<i<<" ";
         }
-        cout<<endl;
+       std :: cout<<std :: endl;
     }
 
 }

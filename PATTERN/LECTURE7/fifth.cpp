@@ -4,30 +4,35 @@
 //      c c c
 //      d d d d
 //      e e e e e
+
 #include<iostream>
-using namespace std;
- 
-int main()
+int main(void)
 {
     int n;
-    cout<<"enter the number:";
-    cin>>n;
-    if(n<=26)
+    std ::cout<<"enter the number:"<<std ::endl;
+    while(true)
     {
-    for(int i=1;i<=n;i=i+1)
+    std ::cin>>n;
+       if(n>0 && n<=26)
+       {
+        break;
+       }
+       else 
+       {
+         std ::cout<<"please enter the value between (1 to 26:)"<<std ::endl;
+       }
+    }
+
+    
+    for(int row=1;row<=n; row++)
     {
-        char name='a'+(i-1);
-        for(int j=i;j>=1;j=j-1)
-        {
-            cout<<name<<" ";
-        }
-        cout<<endl;
+       char name= 'a'+(row-1);
+       for(int j=row; j>0;j--)
+       {
+         std ::cout<<name<<" ";
+       }
+       std ::cout<<std ::endl;
+       
     }
-    }
-    else {
-        cout<<"please enter the number between 1 to 26";
-    }
+   return 0;
 }
-
-
-
