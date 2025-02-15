@@ -38,7 +38,7 @@ int add_single_digit(int n)
 int main(void)
 {
     int n;
-    std ::cout<<"enter the number:";
+    std ::cout<<"enter the value:";
     std ::cin>>n;
     std ::cout<<"The  sum in single digit is:"<<add_single_digit(n);
    return 0;
